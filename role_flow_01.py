@@ -17,5 +17,3 @@ class RolesManagement():
             print(self.df)
             return(eid, self.df.loc[self.df["email"] == eid, "level"].item())
 
-val = RolesManagement().role_ops()
-print(val)

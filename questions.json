@@ -1,0 +1,1 @@
+[{"ques": "Check if a given string is palindrome or not.", "example": "malayalam, it is a palindrome string since it is same if you read it starting backwards", "ans": ""}, {"ques":"Write a program to check first n prime numbers. Where n is an user input", "example":"if user inputs 100 then the program should print first 100 prime numbers", "ans":""}]

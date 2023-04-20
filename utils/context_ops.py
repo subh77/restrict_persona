@@ -1,4 +1,4 @@
-import role_flow_01
+import utils.role_flow_01 as role_flow_01
 
 candidate_details = role_flow_01.RolesManagement().role_ops()
 print(candidate_details)

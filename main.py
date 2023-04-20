@@ -1,4 +1,5 @@
-import user_input, alpha_model
+# import utils.user_input as user_input, utils.alpha_model as alpha_model
+from utils import user_input, alpha_model
 #, context_ops, user_input, role_flow_01
 
 def runtime():
@@ -7,5 +8,5 @@ def runtime():
     return val
 
 
-if __name__ == "__main__":
-    val = runtime()
+# if __name__ == "__main__":
+val = runtime()

@@ -1,6 +1,13 @@
 import json
 import tkinter as tk
 from tkinter import messagebox
+import os
+
+ques_path = os.path.abspath(__file__)
+qes_dir = os.path.split(ques_path)[0]
+rel_path = "questions.json"
+abs_file_path = os.path.join(qes_dir, rel_path)
+print(abs_file_path)
 
 class QuestionWindow:
     def __init__(self, master):
@@ -18,14 +25,14 @@ class QuestionWindow:
         self.submit_button.pack()
 
     def load_questions(self):
-        with open('questions.json', 'r') as f:
+        with open(abs_file_path, 'r') as f:
             questions = json.load(f)
         return questions
 
     def submit_answer(self):
         self.questions[self.current_question]['ans'] = self.answer_entry.get()
 
-        with open('questions.json', 'w') as f:
+        with open(abs_file_path, 'w') as f:
             json.dump(self.questions, f)
 
         messagebox.showinfo("Success", "Answer submitted!")
